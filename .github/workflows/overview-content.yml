@@ -22,8 +22,8 @@ jobs:
 
           readme = Path("README.md").read_text(encoding="utf-8")
           images = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", readme)
-          if len(images) != 6:
-              raise SystemExit(f"Expected 6 screenshot links, found {len(images)}")
+          if len(images) != 9:
+              raise SystemExit(f"Expected 9 screenshot links, found {len(images)}")
           missing = [image for image in images if not Path(image).is_file()]
           if missing:
               raise SystemExit("Missing screenshot files: " + ", ".join(missing))
