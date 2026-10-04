@@ -39,7 +39,7 @@ flowchart LR
 
 ## Screenshots
 
-These captures show representative public and member-facing pages from October 4, 2026. They exclude the member directory, signed-in profiles, attendance lists, and private staff pages.
+The public-site captures were taken on October 4, 2026. The member-profile and Android app images are clearly labeled synthetic examples based on supplied screenshots; real identity, card, event, and attendance details were replaced.
 
 ### Public site and gatherings
 
@@ -53,10 +53,24 @@ These captures show representative public and member-facing pages from October 4
 | --- | --- | --- |
 | ![Member sign-in page with blank fields](docs/screenshots/malaya-member-access-desktop.png) | ![MALAYA home page in a phone-sized web viewport](docs/screenshots/malaya-home-mobile.png) | ![Member sign-in page in a phone-sized web viewport](docs/screenshots/malaya-member-access-mobile.png) |
 
-The phone-sized images show the responsive website. A native Android app screenshot is not included yet.
+The phone-sized web images show the responsive website.
+
+### Member profile (synthetic example)
+
+The third supplied reference image is represented here with a generic avatar and placeholder profile data.
+
+![Synthetic MALAYA member profile with placeholder identity and zero activity](docs/screenshots/malaya-member-profile-demo.png)
+
+### Android app (synthetic examples)
+
+| NFC check-in | Attendance log |
+| --- | --- |
+| ![Android NFC check-in screen with fictional sample card data](docs/screenshots/malaya-android-scan-demo.png) | ![Android attendance log with fictional event and attendance counts](docs/screenshots/malaya-android-attendance-demo.png) |
+
+These edited app examples use fictional event, card, and attendance values. They do not show a real scan record, participant list, or live event.
 
 ## Privacy and repository scope
 
 This is a public project overview with screenshots. It does not distribute the application source or operational documentation. The implementation is maintained separately.
 
-No environment files, credentials, member profiles, rosters, attendance records, or private staff screens are included here. Live account and attendance data belong in the authenticated application, not in this repository. Public screenshots should continue to use public pages or synthetic data only.
+No environment files, credentials, personal member details, rosters, or live attendance records are included here. The sample app and profile screens use placeholder data only; live account and attendance data belong in the authenticated application. Public screenshots should use public pages or synthetic data only.
