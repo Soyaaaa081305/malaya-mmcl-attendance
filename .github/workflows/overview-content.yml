@@ -1,0 +1,31 @@
+name: Overview content validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  overview-content:
+    name: Overview content validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate README screenshots
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          readme = Path("README.md").read_text(encoding="utf-8")
+          images = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", readme)
+          if len(images) != 6:
+              raise SystemExit(f"Expected 6 screenshot links, found {len(images)}")
+          missing = [image for image in images if not Path(image).is_file()]
+          if missing:
+              raise SystemExit("Missing screenshot files: " + ", ".join(missing))
+          print("README screenshot links are present.")
+          PY
